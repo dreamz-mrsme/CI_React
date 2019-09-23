@@ -6,7 +6,7 @@ before_install:
   - docker build -t mrsme/ci-react -f dev.Dockerfile .
 
 script:
-  - docker run mrsme/ci-react npm run test -- --coverage
+  - docker run -e CI=true mrsme/ci-react npm run test -- --coverage
 
 deploy:
   provider: elasticbeanstalk
