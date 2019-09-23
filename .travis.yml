@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t mrsme/CI-React -f dev.Dockerfile .
+  - docker build -t mrsme/ci-react -f dev.Dockerfile .
 
 script:
-  - docker run mrsme/CI-React npm run test -- -- coverage
+  - docker run mrsme/ci-react npm run test -- -- coverage
